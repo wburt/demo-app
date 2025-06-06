@@ -44,6 +44,9 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          env:
+            - name: DEMO_MESSAGE
+              value: {{ .Values.demoMessage }}
           {{- with .Values.resources }}
           resources:
             {{- toYaml . | nindent 12 }}
