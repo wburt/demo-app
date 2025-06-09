@@ -5,17 +5,6 @@
 - Access to an OpenShift cluster
 - WSL installed and set up ([Microsoft guide](https://learn.microsoft.com/en-us/windows/wsl/install))
 - `oc` CLI installed in WSL ([BC Gov guide](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/docs/openshift-projects-and-access/install-the-oc-command-line-tool/))
-- `helm` installed in WSL ([Helm guide](https://helm.sh/docs/intro/install/))
-
-### Installing Helm
-
-Use the following commands to install helm in WSL
-```sh
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-chmod 700 get_helm.sh
-./get_helm.sh
-```
-
 
 ## Deploying an application
 
