@@ -62,7 +62,7 @@ Go over to the web gui [https://console.apps.silver.devops.gov.bc.ca](https://co
 - From the top left, enter the `Developer` view, and then select `d4a7e0-dev` from the project immediately next to developer section
 - On the `Topology` page, you will see a page with cards for each deployment. You can click on the link icon on the top right of your card to open the deployed application
 
-<img src="images/oc-topology.png" alt="Topology in Openshift GUI" width="100%">
+<img src="images/oc-topology.png" alt="Topology in Openshift GUI" width="800">
 
 Alternatively:\
 From the WSL terminal, you can run `oc get routes` to list out all the routes in the namespace
