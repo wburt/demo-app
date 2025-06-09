@@ -1,12 +1,11 @@
 # Quick Guide: Deploying the Demo App to OpenShift with oc and Helm
 
----
 
 ## Prerequisites
 - Access to an OpenShift cluster
 - WSL installed and set up ([Microsoft guide](https://learn.microsoft.com/en-us/windows/wsl/install))
-- `oc` CLI installed in WSL [BC Gov guide](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/docs/openshift-projects-and-access/install-the-oc-command-line-tool/)
-- `helm` installed in WSL [Helm guide](https://helm.sh/docs/intro/install/)
+- `oc` CLI installed in WSL ([BC Gov guide](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/docs/openshift-projects-and-access/install-the-oc-command-line-tool/))
+- `helm` installed in WSL ([Helm guide](https://helm.sh/docs/intro/install/))
 
 ### Installing Helm
 
@@ -17,30 +16,32 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 ```
 
----
 
-## 1. Clone Repo and cd in
+## Deploying an application
 
+### 1. Clone Repo and cd in
+
+Open a WSL terminal and enter the following commands:
 ```sh
 git clone https://github.com/wburt/demo-app
 cd demo-app
 ```
 
-## 2. Log into oc
+### 2. Log into oc
 
-From [Install the oc command line tool](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/docs/openshift-projects-and-access/install-the-oc-command-line-tool/)
+From [Install the oc command line tool](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/docs/openshift-projects-and-access/install-the-oc-command-line-tool/):
 
 1. In order to login with the oc command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). IDIR is the preferred login method. For instructions, see the [Login to OpenShift Web Console page](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/docs/openshift-projects-and-access/login-to-openshift/)
 2. Click on your name at the top-right corner of the screen, and choose: Copy login command
 3. A new tab will open in your browser. You'll need to login again by clicking the button: **Developer Log In**
 4. Next, you'll be directed to a page with a link to **Display Token**. Please do not share your tokens capture them on screen recordings as these grant access to OpenShift on your behalf. Click the link to reveal your tokens
 5. Copy the entire line of text under: Log in with this token
-6. Paste this command into your WSL terminal and run it. If successful, you should see an indication of which cluster you've logged in to, along with the number of projects you have access to and the project you are currently working in.
+6. Paste this command into your **WSL terminal** and run it. If successful, you should see an indication of which cluster you've logged in to, along with the number of projects you have access to and the project you are currently working in.
 
-## 4. Activate the correct namespace
+### 3. Activate the correct namespace
 If you need to check what namespace you're in, us the command `oc project`. If you're not in `d4a7e0-dev`, then run `oc project d4a7e0-dev` to enter the correct namespace.
 
-## 5. Deploying the application
+### 4. Deploying the application
 Deploy the image by running the following command:
 `helm install <your initials> charts`
 
@@ -53,7 +54,6 @@ STATUS: deployed
 REVISION: 1
 ```
 
----
 ## Exploring your deployed application
 
 Go over to the web gui [https://console.apps.silver.devops.gov.bc.ca](https://console.apps.silver.devops.gov.bc.ca) and explore to see your deployed application, its configuration, and how things are structured.
@@ -102,9 +102,25 @@ oc get <deploy|pod|service|etc> <object> -o yaml
 For example:\
 `oc get deploy ic-demo-app -o yaml` or `oc get deployment.apps/ic-demo-app -o yaml`
 
+### Changing environment variables
 
+To change the message on your application's webpage, you can add an environment variable.
+To do this via the Openshift web gui, navigate to your deployment and open the `Environment`
+section and add a Single Value named DEMO_MESSAGE. You can set the value to whatever you like.\
 
----
+This will cause a new pod to be started with this change. Once it's finished, your webpage will have your message displayed.
+
+You can also do this via a WSL terminal:
+```sh
+oc set env deployment.apps/<deployment> DEMO_MESSAGE=<message>
+```
+
+> **Note**\
+> The environment variable can only be changed at the deployment level.\
+> Once created, a pod's envionment variables cannot be changed.
+
+<br/><br/>
+
 ## References
 - [Helm Documentation](https://helm.sh/docs/)
 - [OpenShift CLI Documentation](https://docs.openshift.com/container-platform/latest/cli_reference/openshift_cli/developer-cli-commands.html)
