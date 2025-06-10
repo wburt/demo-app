@@ -122,7 +122,7 @@ oc set env deployment.apps/<deployment> DEMO_MESSAGE=<message>
 
 ##  Removing your application
 
-When you are finished examining your application, you can take it down by running `oc uninstall <your initials>`
+When you are finished examining your application, you can take it down by running `helm uninstall <your initials>`
 
 <br/><br/>
 
