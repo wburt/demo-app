@@ -20,8 +20,9 @@ The purpose of this demo is to:
 3. Install the OpenShift CLI (`oc`) and Helm in your WSL environment
 4. Follow the detailed instructions in [Openshift_Tutorial.md](./Openshift_Tutorial.md)
 
-## Tutorial
+## Tutorials
 
+### Basic OpenShift Deployment
 The [Openshift_Tutorial.md](./Openshift_Tutorial.md) document provides an introduction on:
 
 - Logging into OpenShift via the command line
@@ -29,6 +30,14 @@ The [Openshift_Tutorial.md](./Openshift_Tutorial.md) document provides an introd
 - Exploring the deployed application
 - Viewing and modifying configuration settings
 - Working with environment variables
+
+### Managing Environment Variables with Helm
+The [Helm_Variables_Tutorial.md](./Helm_Variables_Tutorial.md) shows how to:
+
+- Configure environment variables directly in Helm chart files
+- Modify the values.yaml and deployment.yaml files
+- Deploy and verify your changes
+- Update variables using Helm upgrades
 
 ## Target Audience
 
@@ -42,4 +51,5 @@ This demo is ideal for:
 - `app.py` - Simple Python web application
 - `Dockerfile` - Container definition for the application
 - `charts/` - Helm chart for deploying to OpenShift
-- `Openshift_Tutorial.md` - Step-by-step tutorial guide
+- `Openshift_Tutorial.md` - Step-by-step tutorial for basic OpenShift deployment
+- `Helm_Variables_Tutorial.md` - Guide for managing environment variables with Helm
