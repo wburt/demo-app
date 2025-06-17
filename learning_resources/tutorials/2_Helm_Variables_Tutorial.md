@@ -8,9 +8,8 @@ This tutorial will show you how to modify environment variables in your OpenShif
 - WSL installed and set up ([Microsoft guide](https://learn.microsoft.com/en-us/windows/wsl/install))
 - `oc` CLI installed in WSL ([BC Gov guide](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/docs/openshift-projects-and-access/install-the-oc-command-line-tool/))
 - `helm` installed in WSL ([Helm guide](https://helm.sh/docs/intro/install/))
-- Visual Studio Code or another IDE with YAML support
-- Basic understanding of YAML syntax
-- Familiarity with the deployment steps from [1_Openshift_Tutorial.md](./1_Openshift_Tutorial.md)
+- Visual Studio Code or your preferred IDE ([VS Code](https://code.visualstudio.com/download))
+- Familiarity with the login and deployment steps from [1_Openshift_Tutorial.md](./1_Openshift_Tutorial.md)
 
 ### Setting Up Visual Studio Code
 
