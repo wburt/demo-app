@@ -10,7 +10,7 @@ This tutorial will show you how to modify environment variables in your OpenShif
 - `helm` installed in WSL ([Helm guide](https://helm.sh/docs/intro/install/))
 - Visual Studio Code or another IDE with YAML support
 - Basic understanding of YAML syntax
-- Familiarity with the deployment steps from [Openshift_Tutorial.md](./Openshift_Tutorial.md)
+- Familiarity with the deployment steps from [1_Openshift_Tutorial.md](./1_Openshift_Tutorial.md)
 
 ### Setting Up Visual Studio Code
 
@@ -67,6 +67,8 @@ Now you need to modify the deployment template to use the environment variable v
 Now that you've updated your Helm chart files, you need to deploy or upgrade your application to see the changes.
 
 ### 1. Deploy or Upgrade Your Application
+
+Using WSL/Linux:
 
 If you're **deploying for the first time**:
 ```sh
