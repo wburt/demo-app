@@ -18,12 +18,12 @@ The purpose of this demo is to:
 1. Ensure you have access to an OpenShift cluster
 2. Install and set up WSL (Windows Subsystem for Linux)
 3. Install the OpenShift CLI (`oc`) and Helm in your WSL environment
-4. Follow the detailed instructions in [Openshift_Tutorial.md](./Openshift_Tutorial.md)
+4. Follow the detailed instructions in [1_Openshift_Tutorial.md](./learning_resources/tutorials/1_Openshift_Tutorial.md)
 
 ## Tutorials
 
 ### Basic OpenShift Deployment
-The [Openshift_Tutorial.md](./Openshift_Tutorial.md) document provides an introduction on:
+The [1_Openshift_Tutorial.md](./learning_resources/tutorials/1_Openshift_Tutorial.md) document provides an introduction on:
 
 - Logging into OpenShift via the command line
 - Deploying the application using Helm
@@ -32,7 +32,7 @@ The [Openshift_Tutorial.md](./Openshift_Tutorial.md) document provides an introd
 - Working with environment variables
 
 ### Managing Environment Variables with Helm
-The [Helm_Variables_Tutorial.md](./Helm_Variables_Tutorial.md) shows how to:
+The [2_Helm_Variables_Tutorial.md](./learning_resources/tutorials/2_Helm_Variables_Tutorial.md) shows how to:
 
 - Configure environment variables directly in Helm chart files
 - Modify the values.yaml and deployment.yaml files
@@ -51,5 +51,5 @@ This demo is ideal for:
 - `app.py` - Simple Python web application
 - `Dockerfile` - Container definition for the application
 - `charts/` - Helm chart for deploying to OpenShift
-- `Openshift_Tutorial.md` - Step-by-step tutorial for basic OpenShift deployment
-- `Helm_Variables_Tutorial.md` - Guide for managing environment variables with Helm
+- `1_Openshift_Tutorial.md` - Step-by-step tutorial for basic OpenShift deployment
+- `2_Helm_Variables_Tutorial.md` - Guide for managing environment variables with Helm

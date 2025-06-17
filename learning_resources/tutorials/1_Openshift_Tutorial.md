@@ -67,7 +67,6 @@ Go over to the web gui [https://console.apps.silver.devops.gov.bc.ca](https://co
 Alternatively:\
 From the WSL terminal, you can run `oc get routes` to list out all the routes in the namespace
 
-
 ### Viewing your deployed configuration
 There are a number of different ways to view and explore things on Openshift.
 

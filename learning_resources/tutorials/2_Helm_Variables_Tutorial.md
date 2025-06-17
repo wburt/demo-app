@@ -50,7 +50,7 @@ Now you need to modify the deployment template to use the environment variable v
 
 3. **Add or modify the env section** with a static assignment for DEMO_MESSAGE:
    ```yaml
-   # Find the containers section and add this inside it (around line 40-50)
+   # Find the containers section and add this inside it
    containers:
      - name: {{ .Chart.Name }}
        # ...existing configuration like image and ports...
@@ -116,6 +116,7 @@ To modify the environment variable:
 3. Run `helm upgrade <your initials> ./charts`
 
 If you want to add additional environment variables, you'll need to add each one explicitly in both the values.yaml file and the deployment.yaml template.
+If your application supports it, you can add them via a more advanced key-value pair.
 
 > **Note**\
 > Changes made through Helm will trigger a new deployment, replacing pods with the updated configuration.
